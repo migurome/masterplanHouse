@@ -1,4 +1,4 @@
-# Gastos de casa
+# the Master Plan
 
 Web para llevar los gastos e ingresos de una casa: facturas en PDF (se leen en el navegador, sin servicios
 externos), movimientos del Excel del banco, gastos a mano, gráficas por año, mes y categoría, coche, ahorro y una

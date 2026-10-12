@@ -12,6 +12,7 @@ import Compare from "./pages/Compare";
 import Car from "./pages/Car";
 import Savings from "./pages/Savings";
 import Review from "./pages/Review";
+import Logo, { APP_NAME } from "./components/Logo";
 import Activity from "./pages/Activity";
 
 const NAV_MIME = "application/x-gastos-nav";
@@ -56,7 +57,7 @@ export default function App({ demo = false, cloud }: { demo?: boolean; cloud?: C
       {cloud?.banner}
       {demo && <div className="demo-banner">Demo con datos de ejemplo. Los PDF que subas no se analizan de verdad y nada se guarda.</div>}
       <header className="topbar">
-        <span className="brand">Gastos de casa</span>
+        <span className="brand"><Logo size={26} />{APP_NAME}</span>
         <nav aria-label="Pestañas (arrástralas para cambiar el orden)">
           {nav.map((item) => (
             <NavLink key={item.path} to={item.path} end={item.path === "/"} draggable

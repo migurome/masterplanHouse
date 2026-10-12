@@ -11,7 +11,7 @@ import { addDays, fold, month, pyRound, year } from "./py";
 import { buildReview, DISMISSED_KEY, RExpense } from "./review";
 import { SAVINGS_FROM_YEAR, SIN_CATEGORIA } from "./rules";
 
-export const APP_VERSION = "0.21.0";
+export const APP_VERSION = "0.22.0";
 
 export class HttpError extends Error {
   constructor(public status: number, message: string) {

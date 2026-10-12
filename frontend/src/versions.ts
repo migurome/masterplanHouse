@@ -10,6 +10,15 @@ export interface Version {
 
 export const VERSIONS: Version[] = [
   {
+    version: "0.22.0",
+    date: "2026-10-12",
+    title: "the Master Plan",
+    changes: [
+      "La web se llama the Master Plan y tiene logo propio: una doble R (también como icono de la pestaña).",
+      "Publicada en GitHub Pages, con una política de seguridad que solo permite conectar con Supabase.",
+    ],
+  },
+  {
     version: "0.21.0",
     date: "2026-10-12",
     title: "La web entera en la nube, cifrada",

@@ -53,7 +53,7 @@ export function readBackupZip(zip: Uint8Array): { backup: Backup; files: Record<
     throw new BackupFormatError("El archivo no es un ZIP válido.");
   }
   const json = files["backup.json"];
-  if (!json) throw new BackupFormatError("El ZIP no es una copia de seguridad de Gastos de casa (falta backup.json).");
+  if (!json) throw new BackupFormatError("El ZIP no es una copia de seguridad de the Master Plan (falta backup.json).");
   const backup = JSON.parse(new TextDecoder().decode(json)) as Backup;
   if (backup.format !== "gastos-casa" || backup.version > 1) throw new BackupFormatError("Copia de otro formato o de una versión más nueva.");
   return { backup, files };

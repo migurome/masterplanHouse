@@ -1,4 +1,5 @@
 import { FormEvent, useState } from "react";
+import Logo, { APP_NAME } from "../components/Logo";
 import { api } from "../api";
 
 export default function Login({ onLogin }: { onLogin: (user: string) => void }) {
@@ -24,7 +25,7 @@ export default function Login({ onLogin }: { onLogin: (user: string) => void }) 
   return (
     <div className="login">
       <form className="card" onSubmit={submit}>
-        <h1>Gastos de casa</h1>
+        <h1 className="brand-title"><Logo size={36} />{APP_NAME}</h1>
         <label>
           Usuario
           <input value={username} onChange={(e) => setUsername(e.target.value)} autoComplete="username" autoFocus required />

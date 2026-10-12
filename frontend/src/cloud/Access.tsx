@@ -1,6 +1,7 @@
 /** Entrada a la nube: correo + contraseña, segundo factor obligatorio y comprobación de que eres de la casa. */
 import { FormEvent, ReactNode, useEffect, useRef, useState } from "react";
 import { linkError, linkType, problem, supabase } from "./client";
+import Logo, { APP_NAME } from "../components/Logo";
 import { Member } from "./slots";
 
 type Stage =
@@ -16,7 +17,8 @@ export function Panel({ title, children }: { title: string; children: ReactNode 
   return (
     <div className="login">
       <div className="card cloud-panel">
-        <h1>{title}</h1>
+        <div className="brand-title"><Logo size={36} /><span>{APP_NAME}</span></div>
+        {title !== APP_NAME && <h1>{title}</h1>}
         {children}
       </div>
     </div>
@@ -109,7 +111,7 @@ function SignIn({ onDone }: { onDone: () => void }) {
   });
 
   return (
-    <Panel title="Gastos de casa">
+    <Panel title={APP_NAME}>
       <form className="stack" onSubmit={signIn}>
         {linkError && <p className="error">{linkError}</p>}
         <label>Correo<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="username" autoFocus required /></label>
