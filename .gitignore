@@ -1,0 +1,30 @@
+# Facturas y movimientos del banco personales: nunca al repositorio
+/20[0-9][0-9]/
+*.pdf
+/In/
+/in/
+*.xlsx
+*.xls
+*.csv
+
+# Datos de la app (BD, PDFs subidos, clave de sesión)
+backend/data/
+backend/.env
+
+backend/.venv/
+__pycache__/
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+*.tsbuildinfo
+frontend/dist-demo/
+/Documentos/
+
+# Configuración local de Vite
+*.local
+
+# Solo se publica la web de la nube (frontend/) y el esquema de Supabase: la app local (FastAPI) no va al repositorio
+/backend/
+/Dockerfile
+/.dockerignore
+frontend/dist-pages/
